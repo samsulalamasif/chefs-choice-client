@@ -1,9 +1,16 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 const Main = () => {
     return (
         <div>
-            <h1 className='text-5xl text-center'>This is main</h1>
+            <Header></Header>
+            <div className='className="md:min-h-[calc(100vh-100px)]'>
+                <Outlet></Outlet>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };

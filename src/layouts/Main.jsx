@@ -7,10 +7,11 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <div className='className="md:min-h-[calc(100vh-100px)]'>
-                <Outlet></Outlet>
+            <Outlet></Outlet>
+
+            {/* <div className='className="lg:min-h-[calc(100vh-100px)]'>
             </div>
-            <Footer></Footer>
+            <Footer></Footer> */}
         </div>
     );
 };

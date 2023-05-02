@@ -60,13 +60,13 @@ const Login = () => {
 
 
     return (
-        <form onSubmit={handleLogin} className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold">Login now!</h1>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <div className="card-body">
+                    <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -89,7 +89,7 @@ const Login = () => {
                             Don't Have an Account? <Link className='text-blue-700' to="/register">Register</Link>
                         </span>
 
-                    </div>
+                    </form>
                     <div className='flex flex-col w-48 space-y-3 mx-auto mb-5'>
                         <button onClick={googleHandler} className='btn btn-outline'>
                             <FaGoogle size={15}></FaGoogle>Login with Google</button>
@@ -98,7 +98,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     );
 };
 

@@ -1,9 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProviders';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { getAuth, updateProfile } from "firebase/auth";
+import app from '../../firebase/firebase.config';
+const auth = getAuth(app)
 
 const Register = () => {
-    const { createUser, updateProfileUrl } = useContext(AuthContext)
+    const { createUser, google, github, } = useContext(AuthContext)
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('')
 
@@ -16,6 +20,7 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, photo, email, password);
+
 
         setError("")
         setSuccess("")
@@ -30,6 +35,26 @@ const Register = () => {
                 console.log(createdUser);
                 form.reset()
                 setSuccess("Your account successfully created.Thank you.")
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+
+        updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+        })
+
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch((error) => console.log(error))
+    }
+
+    const googleHandler = () => {
+        google()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
 
 
             })
@@ -37,19 +62,28 @@ const Register = () => {
                 setError(error.message);
             })
 
+    }
+    const githubHandler = () => {
+        github()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
 
-
+            })
+            .catch(error => {
+                setError(error.message);
+            })
 
     }
 
     return (
-        <form onSubmit={handleRegister} className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold">Register Please!</h1>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <div className="card-body">
+                    <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -82,11 +116,16 @@ const Register = () => {
                         <span className="label-text">
                             Already Have an Account? <Link className='text-blue-700' to="/login">Login</Link>
                         </span>
-
+                    </form>
+                    <div className='flex flex-col w-48 space-y-3 mx-auto mb-5'>
+                        <button onClick={googleHandler} className='btn btn-outline'>
+                            <FaGoogle size={15}></FaGoogle>Login with Google</button>
+                        <button onClick={githubHandler} className='btn btn-outline'>
+                            <FaGithub size={15}></FaGithub>Login with Github</button>
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     );
 };
 

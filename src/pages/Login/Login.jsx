@@ -1,14 +1,55 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProviders';
 
 const Login = () => {
+    const { signIn, google, github } = useContext(AuthContext)
+    const [error, setError] = useState('');
+
+    const googleHandler = () => {
+        google()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+
+    }
+    const githubHandler = () => {
+        github()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+
+    }
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+
+        setError("")
+        signIn(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                form.reset()
+
+            })
+            .catch(error => {
+                setError(error.message);
+            })
     }
 
 
@@ -35,7 +76,7 @@ const Login = () => {
                             </label>
                             <input type="text" placeholder="password" name='password' className="input input-bordered" required />
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <span className="label-text text-red-600">{error}</span>
                             </label>
                         </div>
                         <div className="form-control mt-6">
@@ -47,11 +88,10 @@ const Login = () => {
 
                     </div>
                     <div className='flex flex-col w-48 space-y-3 mx-auto mb-5'>
-                        <button className='btn btn-outline'>
+                        <button onClick={googleHandler} className='btn btn-outline'>
                             <FaGoogle size={15}></FaGoogle>Login with Google</button>
-                        <button className='btn btn-outline'>
+                        <button onClick={githubHandler} className='btn btn-outline'>
                             <FaGithub size={15}></FaGithub>Login with Github</button>
-
                     </div>
                 </div>
             </div>

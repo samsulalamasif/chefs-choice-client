@@ -32,6 +32,13 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
+                updateProfile(auth.currentUser, {
+                    displayName: name, photoURL: photo
+                })
+                    .then(result => {
+                        console.log(result.user);
+                    })
+                    .catch((error) => console.log(error))
                 console.log(createdUser);
                 form.reset()
                 setSuccess("Your account successfully created.Thank you.")
@@ -40,14 +47,7 @@ const Register = () => {
                 setError(error.message);
             })
 
-        updateProfile(auth.currentUser, {
-            displayName: name, photoURL: photo
-        })
 
-            .then(result => {
-                console.log(result.user);
-            })
-            .catch((error) => console.log(error))
     }
 
     const googleHandler = () => {

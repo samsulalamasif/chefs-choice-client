@@ -8,3 +8,10 @@
 ## Live Link:
 
 ### Hosted in Firebase -> [Chef's Choice](https://chefs-choice-client.web.app/)
+
+
+## [React Router](https://reactrouter.com/en/main/start/tutorial)
+## [React Hot Toast](https://react-hot-toast.com/docs)
+## [React Icon](https://react-icons.github.io/react-icons/)
+## [Daisyui](https://daisyui.com/)
+

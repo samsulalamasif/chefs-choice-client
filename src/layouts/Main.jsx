@@ -9,7 +9,7 @@ const Main = () => {
         <div>
             <Header></Header>
             <Outlet></Outlet>
-            <div className='lg:min-h-[calc(100vh-100px)]'>
+            <div className="md:min-h-[calc(100vh-100px)]">
             </div>
             <Footer></Footer>
             <ToastContainer />

@@ -7,11 +7,14 @@ const Login = () => {
     const { signIn, google, github } = useContext(AuthContext)
     const [error, setError] = useState('');
 
+
+
     const googleHandler = () => {
         google()
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+
 
             })
             .catch(error => {

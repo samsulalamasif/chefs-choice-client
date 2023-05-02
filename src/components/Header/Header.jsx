@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
+import { AuthContext } from '../../providers/AuthProviders';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext)
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error))
+    }
+
+
     return (
         <div className="navbar bg-stone-200">
             <div className="navbar-start">
@@ -29,7 +40,13 @@ const Header = () => {
             </div>
             <div className="navbar-end pr-5">
                 <p className='pr-5'><FaUser size={30}></FaUser></p>
-                <a className="btn">Login</a>
+                {user && <img className='w-14 p-2 rounded-full' src={user.photoURL} />}
+                {user ?
+                    <button onClick={handleLogOut} className='btn btn-secondary'>Logout</button> :
+                    <Link to="/login">
+                        <button className='btn btn-secondary'>Login</button>
+                    </Link>
+                }
             </div>
         </div>
     );

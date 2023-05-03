@@ -32,8 +32,7 @@ const Header = () => {
                             Register</ActiveLink></li>
                     </ul>
                 </div>
-                <Link to="/" className="font-serif font-bold text-3xl pl-5"
-                    style={{ color: "rgb(7, 215, 215)" }}>Chef's Choice</Link>
+                <Link to="/" className="font-serif font-bold text-gray-800 text-4xl pl-5">Chef's Choice</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex gap-5">

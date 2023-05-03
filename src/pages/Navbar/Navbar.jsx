@@ -5,13 +5,13 @@ const Navbar = () => {
     return (
         <div className='flex flex-col-reverse lg:flex-row justify-evenly pt-10 px-24  bg-stone-200 '>
             <div className=' pt-28'>
-                <h1 className='text-7xl font-serif font-bold  mb-8'>
+                <h1 className='text-7xl font-serif text-gray-700 font-bold  mb-8'>
                     Italian Food</h1>
-                <h1 className='text-4xl font-serif font-semibold '>
+                <h1 className='text-4xl font-serif text-gray-700 font-semibold '>
                     Your favorite</h1>
-                <h1 className='text-4xl font-serif font-semibold '>
+                <h1 className='text-4xl font-serif text-gray-700 font-semibold '>
                     food gets even</h1>
-                <h1 className='text-4xl font-serif  font-semibold '>better</h1>
+                <h1 className='text-4xl font-serif  text-gray-700 font-semibold '>better</h1>
                 <p className='text-xl font-sans text-gray-700 my-5'>
                     Amet consectetur adipisicing elit. Aperiam dolorem <br />
                     minima beatae, molestiae quaerat animi ea nulla ad, omnis vitae <br />

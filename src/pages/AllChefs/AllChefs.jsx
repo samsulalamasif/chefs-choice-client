@@ -10,7 +10,7 @@ const AllChefs = ({ chef }) => {
             <div className="card-body">
                 <h2 className="card-title text-3xl font-serif">{chefName}</h2>
                 <div className='flex justify-between items-center my-5'>
-                    <div className='font-semibold text-cyan-800'>
+                    <div className='font-semibold text-gray-800'>
                         <li>Numbers of recipes: {recipesNumber}</li>
                         <li>Years of experience: {experience} years</li>
                     </div>
@@ -22,7 +22,7 @@ const AllChefs = ({ chef }) => {
                 <div className="card-actions justify-center">
 
                     <Link to={`chefs/${_id}`}>
-                        <button className="btn btn-outline btn-info">View Recipes Button</button></Link>
+                        <button className="btn btn-outline ">View Recipes Button</button></Link>
                 </div>
             </div>
         </div>

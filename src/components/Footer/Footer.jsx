@@ -7,17 +7,14 @@ const Footer = () => {
     return (
         <div className=" bg-gray-800" >
             <h1 className='text-indigo-400  font-serif font-semibold 
-            text-6xl text-center py-10'>Chef's Choice</h1>
+            text-6xl text-center py-6'>Chef's Choice</h1>
             <p className='text-white text-center font-mono'>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi <br />
-                atque recusandae dicta beatae quod similique, maiores illo, reiciendis ipsum <br />
-                brpraesentium voluptas, fugit architecto doloremque aperiam doloribus obcaecati. Fugit, <br />
-                ani ilique, maiores illo, reiciendis ipsum praesentium voluptas, fugit architecto doloremque aperiam doloribus .
-
+                atque recusandae dicta beatae quod similique, maiores illo, reiciendis ipsum
             </p>
             <div>
                 <h1 className='text-white  font-serif font-bold 
-            text-3xl text-center mt-10 mb-3'>Contact us</h1>
+            text-3xl text-center mt-8 mb-3'>Contact us</h1>
                 <div className='flex items-center w-3/6  mx-auto gap-16'>
                     <h1 className='text-white  font-semibold  text-sm my-5'>
                         Address: 14/5A Strada Statale 30,Caprile, Italy <br />
@@ -36,7 +33,7 @@ const Footer = () => {
                 </div>
             </div>
             <Link to="/">
-                <h1 className="text-white text-lg py-16 font-semibold text-center">
+                <h1 className="text-white text-sm py-8 font-semibold text-center">
                     Copyright © 2023 Chef's Choice. All Rights Reserved.
                 </h1>
             </Link>

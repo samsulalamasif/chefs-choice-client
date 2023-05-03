@@ -2,22 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import BgImg from "../../assets/bgImg1.jpg"
 import { FaThumbsUp } from 'react-icons/fa';
-import { Rating } from '@smastrom/react-rating'
-import '@smastrom/react-rating/style.css'
-import { toast } from 'react-toastify';
 import Recipe from '../Recipe/Recipe';
+import LazyLoad from 'react-lazy-load';
 
 
 const ChefDetails = () => {
-    const [disableBtn, setDisableBtn] = useState(true)
-
-    const favoriteHandler = () => {
-        toast("Favorite food add list items. Thank you!")
-        setDisableBtn()
-    }
 
     const [chef, setChef] = useState([])
-    const { _id, chefName, chefPic, experience, recipesNumber, likes, description, recipeOne, recipeTwo, recipeThree } = chef
+    const { chefName, chefPic, experience, recipesNumber, likes, description, recipeOne, recipeTwo, recipeThree } = chef
 
     const { id } = useParams()
     useEffect(() => {
@@ -33,7 +25,9 @@ const ChefDetails = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md">
-                            <img src={chefPic} className="w-44 h-44 mt-10  rounded-full mx-auto" />
+                            <LazyLoad >
+                                <img src={chefPic} className="w-44 h-44 mt-10  rounded-full mx-auto" />
+                            </LazyLoad>
                             <h1 className="mb-5 text-7xl font-bold my-5">{chefName}</h1>
                             <p className="mb-5">{description}</p>
                             <div className='text-cyan-300 text-xl font-bold '>

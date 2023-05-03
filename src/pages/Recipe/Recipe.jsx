@@ -1,4 +1,5 @@
 import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css'
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 

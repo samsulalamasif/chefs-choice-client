@@ -12,12 +12,12 @@ const Recipe = ({ recipeOne }) => {
     }
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mx-auto">
             <figure className='h-96'><img src={recipeOne?.recipeImg} alt="" /></figure>
             <div className="card-body">
                 <h2 className="card-title font-serif mx-auto text-3xl">{recipeOne?.recipeName}</h2>
                 <h2 className="text-xl font-bold my-3">Ingredients: {recipeOne?.ingredients}</h2>
-                <p>Cooking Method: {recipeOne?.cookingMethod}</p>
+                <p><span className='font-bold'>Cooking Method:</span> {recipeOne?.cookingMethod}</p>
                 <div className="flex justify-between  items-center">
                     <button disabled={!disableBtn} onClick={favoriteHandler} className="btn btn-outline btn-accent w-24">
                         Favorite</button>

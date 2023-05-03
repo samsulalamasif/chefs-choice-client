@@ -9,20 +9,16 @@ const AllChefs = ({ chef }) => {
             <figure><img src={chefPic} alt="" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-3xl font-serif">{chefName}</h2>
-                <div className='flex justify-between items-center my-5'>
-                    <div className='font-semibold text-gray-800'>
-                        <li>Numbers of recipes: {recipesNumber}</li>
-                        <li>Years of experience: {experience} years</li>
-                    </div>
-                    <div>
-                        <p className='flex items-center font-bold gap-2'><FaThumbsUp></FaThumbsUp>{likes}</p>
-                    </div>
-
+                <div className='font-semibold text-gray-800  my-5'>
+                    <li>Numbers of recipes: {recipesNumber}</li>
+                    <li>Years of experience: {experience} years</li>
                 </div>
-                <div className="card-actions justify-center">
-
-                    <Link to={`chefs/${_id}`}>
-                        <button className="btn btn-outline ">View Recipes Button</button></Link>
+                <div className="flex justify-between">
+                    <div>
+                        <Link to={`chefs/${_id}`} className='flex-grow-1'>
+                            <button className="btn btn-outline ">View Recipes</button></Link>
+                    </div>
+                    <div className='flex items-center text-2xl font-semibold gap-2'><FaThumbsUp></FaThumbsUp>{likes}</div>
                 </div>
             </div>
         </div>

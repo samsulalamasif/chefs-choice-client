@@ -20,7 +20,7 @@ const Navbar = () => {
                     sapiente officia autem voluptates.
                 </p>
                 <button className="btn btn-outline  mt-8">
-                    Get Started
+                    Learn More
                 </button>
             </div>
             <div className="w-56 lg:w-[350px]">

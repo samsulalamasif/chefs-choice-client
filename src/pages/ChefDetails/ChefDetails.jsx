@@ -41,7 +41,7 @@ const ChefDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className='grid grid-cols-3 p-24'>
+            <div className='grid grid-col lg:grid-cols-3 mx-auto gap-10 py-24'>
                 <Recipe recipeOne={recipeOne}></Recipe>
                 <Recipe recipeOne={recipeTwo}></Recipe>
                 <Recipe recipeOne={recipeThree}></Recipe>

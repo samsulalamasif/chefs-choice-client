@@ -4,6 +4,7 @@ import BgImg from "../../assets/bgImg1.jpg"
 import { FaThumbsUp } from 'react-icons/fa';
 import Recipe from '../Recipe/Recipe';
 import LazyLoad from 'react-lazy-load';
+import "./ChefDetails.css"
 
 
 const ChefDetails = () => {
@@ -46,6 +47,7 @@ const ChefDetails = () => {
                 <Recipe recipeOne={recipeThree}></Recipe>
             </div>
 
+
         </div>
     );
 };
@@ -53,18 +55,3 @@ export default ChefDetails;
 
 
 
-
-
-
-{/* <div style={{
-    backgroundImage: `url(${BgImg})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    height: "100vh"
-}}>
-
-    <div>
-        <h1>{chefName}</h1>
-    </div>
-</div> */}

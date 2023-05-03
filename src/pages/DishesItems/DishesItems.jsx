@@ -102,18 +102,3 @@ export default DishesItems;
 
 
 
-{/* <div className='flex '>
-    <div className='flex flex-col items-center p-8'>
-        <img className='w-48 h-48 rounded-full' src={recipeOne?.recipeImg} />
-        <h2 className="mt-6 font-bold text-cyan-900 text-4xl ">{recipeOne?.recipeName}</h2>
-    </div>
-    <div className='flex flex-col items-center p-8'>
-        <img className='w-48 h-48 rounded-full' src={recipeTwo?.recipeImg} />
-        <h2 className="mt-6 font-bold text-cyan-900 text-4xl ">{recipeTwo?.recipeName}</h2>
-    </div>
-    <div className='flex flex-col items-center p-8'>
-        <img className='w-48 h-48 rounded-full' src={recipeThree?.recipeImg} />
-        <h2 className="mt-6 font-bold text-cyan-900 text-4xl ">{recipeThree?.recipeName}</h2>
-    </div>
-
-</div> */}

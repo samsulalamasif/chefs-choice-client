@@ -15,7 +15,7 @@ const Footer = () => {
             <div>
                 <h1 className='text-white  font-serif font-bold 
             text-3xl text-center mt-8 mb-3'>Contact us</h1>
-                <div className='flex items-center w-3/6  mx-auto gap-16'>
+                <div className='flex flex-col lg:flex-row items-center w-3/6  mx-auto gap-16'>
                     <h1 className='text-white  font-semibold  text-sm my-5'>
                         Address: 14/5A Strada Statale 30,Caprile, Italy <br />
                         Support: chefs-choice@gmail.com <br />

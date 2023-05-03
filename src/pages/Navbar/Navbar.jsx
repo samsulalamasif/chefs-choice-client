@@ -3,7 +3,7 @@ import img from "../../assets/chef.png"
 
 const Navbar = () => {
     return (
-        <div className='flex flex-col-reverse lg:flex-row justify-evenly pt-10 px-24  bg-stone-200 '>
+        <div className='flex flex-col lg:flex-row justify-evenly pt-10 px-24 gap-10  bg-stone-200 '>
             <div className=' pt-28'>
                 <h1 className='text-7xl font-serif text-gray-700 font-bold  mb-8'>
                     Italian Food</h1>

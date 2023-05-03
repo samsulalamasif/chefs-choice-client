@@ -24,19 +24,25 @@ const Header = () => {
                     </label>
                     <ul tabIndex={0} className="dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><ActiveLink className='text-lg font-semibold' to="/">Home</ActiveLink></li>
-                        <li><ActiveLink className='text-lg font-semibold' to="/blog">Blog</ActiveLink></li>
-                        <li><ActiveLink className='text-lg font-semibold' to="/login">Login</ActiveLink></li>
-                        <li><ActiveLink className='text-lg font-semibold' to="/register">Register</ActiveLink></li>
+                        <li><ActiveLink className='text-lg font-semibold' to="/blog">
+                            Blog</ActiveLink></li>
+                        <li><ActiveLink className='text-lg font-semibold' to="/login">
+                            Login</ActiveLink></li>
+                        <li><ActiveLink className='text-lg font-semibold' to="/register">
+                            Register</ActiveLink></li>
                     </ul>
                 </div>
-                <Link to="/" className="font-serif font-bold text-cyan-500 text-3xl pl-5">Chef's Choice</Link>
+                <Link to="/" className="font-serif font-bold text-3xl pl-5"
+                    style={{ color: "rgb(7, 215, 215)" }}>Chef's Choice</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex gap-5">
                     <li><ActiveLink className='text-lg font-semibold' to="/">Home</ActiveLink></li>
                     <li><ActiveLink className='text-4xl font-bold' to="/blog">Blog</ActiveLink></li>
-                    <li><ActiveLink className='text-lg font-semibold' to="/login">Login</ActiveLink></li>
-                    <li><ActiveLink className='text-lg font-semibold' to="/register">Register</ActiveLink></li>
+                    <li><ActiveLink className='text-lg font-semibold' to="/login">
+                        Login</ActiveLink></li>
+                    <li><ActiveLink className='text-lg font-semibold' to="/register">
+                        Register</ActiveLink></li>
                 </ul>
             </div>
             <div className="navbar-end pr-5">

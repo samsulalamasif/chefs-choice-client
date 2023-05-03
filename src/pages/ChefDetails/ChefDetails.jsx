@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import BgImg from "../../assets/bg1.jpg"
+import BgImg from "../../assets/bgImg1.jpg"
 import { FaThumbsUp } from 'react-icons/fa';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
@@ -33,7 +33,7 @@ const ChefDetails = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md">
-                            <img src={chefPic} className="w-48 h-48 rounded-full mx-auto" />
+                            <img src={chefPic} className="w-44 h-44 mt-10  rounded-full mx-auto" />
                             <h1 className="mb-5 text-7xl font-bold my-5">{chefName}</h1>
                             <p className="mb-5">{description}</p>
                             <div className='text-cyan-300 text-xl font-bold '>
